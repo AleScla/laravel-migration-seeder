@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('company', 64);
             $table->string('starting_station', 64);
             $table->string('arrival_station', 64);
-            $table->string('departure', 5);
-            $table->string('arrival', 5);
+            $table->string('departure', 64);
+            $table->string('arrival', 64);
             $table->smallInteger('train_number');
             $table->smallInteger('cabs_number')->nullable();
             $table->boolean('on_time');

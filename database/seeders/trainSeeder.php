@@ -19,14 +19,13 @@ class trainSeeder extends Seeder
             $train->company = fake()->company();
             $train->starting_station = fake()->city();
             $train->arrival_station = fake()->city();
-            $train->departure = '10:55';
-            $train->arrival ='15:00';
+            $train->departure = fake()->dateTimeBetween('now', '+1 days');
+            $train->arrival = fake()->dateTimeBetween('now', '+1 days');
             $train->train_number = rand(1, 100);
             $train->cabs_number = rand(1, 10);
             $train->on_time = fake()->boolean(70);
             $train->cancelled = fake()->boolean(20);
             $train->save();
-
         }
     }
 }
